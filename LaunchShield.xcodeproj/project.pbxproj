@@ -11,7 +11,21 @@
 		B33000F62BF72AAD00B75B65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33000F52BF72AAD00B75B65 /* ContentView.swift */; };
 		B33000F82BF72AAE00B75B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33000F72BF72AAE00B75B65 /* Assets.xcassets */; };
 		B33000FC2BF72AAE00B75B65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33000FB2BF72AAE00B75B65 /* Preview Assets.xcassets */; };
+		B39BDD0B2BFB0B7C002DEDDB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B39BDD0A2BFB0B7C002DEDDB /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B39BDD1E2BFB0D97002DEDDB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B33000F02BF72AAD00B75B65 /* LaunchShield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchShield.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +35,10 @@
 		B33000F92BF72AAE00B75B65 /* LaunchShield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaunchShield.entitlements; sourceTree = "<group>"; };
 		B33000FB2BF72AAE00B75B65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B33001022BF72AD800B75B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B39BDD0A2BFB0B7C002DEDDB /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		B39BDD122BFB0D97002DEDDB /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		B39BDD152BFB0D97002DEDDB /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		B39BDD172BFB0D97002DEDDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				B33000F22BF72AAD00B75B65 /* LaunchShield */,
+				B39BDD142BFB0D97002DEDDB /* LSIntents */,
+				B39BDD112BFB0D97002DEDDB /* Frameworks */,
 				B33000F12BF72AAD00B75B65 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +79,7 @@
 				B33000F72BF72AAE00B75B65 /* Assets.xcassets */,
 				B33000F92BF72AAE00B75B65 /* LaunchShield.entitlements */,
 				B33000FA2BF72AAE00B75B65 /* Preview Content */,
+				B39BDD0A2BFB0B7C002DEDDB /* Intents.intentdefinition */,
 			);
 			path = LaunchShield;
 			sourceTree = "<group>";
@@ -71,6 +92,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B39BDD112BFB0D97002DEDDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B39BDD122BFB0D97002DEDDB /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B39BDD142BFB0D97002DEDDB /* LSIntents */ = {
+			isa = PBXGroup;
+			children = (
+				B39BDD152BFB0D97002DEDDB /* IntentHandler.swift */,
+				B39BDD172BFB0D97002DEDDB /* Info.plist */,
+			);
+			path = LSIntents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,6 +119,7 @@
 				B33000EC2BF72AAD00B75B65 /* Sources */,
 				B33000ED2BF72AAD00B75B65 /* Frameworks */,
 				B33000EE2BF72AAD00B75B65 /* Resources */,
+				B39BDD1E2BFB0D97002DEDDB /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -98,7 +137,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					B33000EF2BF72AAD00B75B65 = {
@@ -141,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39BDD0B2BFB0B7C002DEDDB /* Intents.intentdefinition in Sources */,
 				B33000F62BF72AAD00B75B65 /* ContentView.swift in Sources */,
 				B33000F42BF72AAD00B75B65 /* LaunchShieldApp.swift in Sources */,
 			);
@@ -201,6 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -256,6 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -266,18 +308,20 @@
 		B33001002BF72AAE00B75B65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LaunchShield/LaunchShield.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchShield/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LaunchShield/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LaunchShield;
+				INFOPLIST_KEY_CFBundleDisplayName = "⛨Shield";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -293,9 +337,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.LaunchShield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -308,18 +353,20 @@
 		B33001012BF72AAE00B75B65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LaunchShield/LaunchShield.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchShield/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LaunchShield/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LaunchShield;
+				INFOPLIST_KEY_CFBundleDisplayName = "⛨Shield";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -335,9 +382,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.LaunchShield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
